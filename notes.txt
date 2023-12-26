@@ -1,0 +1,18 @@
+LETS GET WORK DONE
+
+SCHOOL
+WORK
+CHILL TIME
+GYM
+
+if more categoriess  added enable scroll within category div
+
+
+SCHOOL
+
+TEXT AREA PLUS SIGN 
+TASKS ADDD TO THE TOP
+
+CHECK BOX
+
+CROSS OUT TASK WHEN CHECK 

@@ -1,0 +1,85 @@
+body{
+    background-image: url(pixel-sky-art.png);
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: "VT323";
+}
+
+
+.container{
+    text-align: center;
+}
+
+.heading{
+    margin-bottom: 50px;
+}
+
+.heading h1{   
+    font-size: 60px;
+    /* font: VT323; */
+    font-family: VT323;
+    color: #f0f8ff;
+    
+}
+
+.heading h2{
+    color: #f0f8ff;
+    font-family: VT323;
+    font-size: 30px;
+
+}
+
+
+.text-border{
+    text-shadow: 
+        -1px -1px 20px #000, /* Top-left shadow */
+        1px -1px 0 #000,  /* Top-right shadow */
+        -1px 1px 0 #000,  /* Bottom-left shadow */
+        1px 1px 0 #000;   /* Bottom-right shadow */
+    
+}
+
+#category{
+    display: flex;
+    
+}
+
+#category-div{
+    background-color: #f0f8ff;
+    border-radius: 25px;
+    width: 350px;
+    height: 70px;
+    margin-bottom: 25px;
+
+}
+
+#category{
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+#category-div h2{
+    color: rgb(18, 18, 33);
+}
+
+#category-div img{
+    width: 60px;
+    height: 70px;
+}
+
+
+.btn{
+    height: 50px;
+    width: 120px;
+    background-color: aliceblue;
+    border-radius: 25px;
+    border: #f0f8ff;
+    font-size: 20px;
+    font-family: VT323;
+}

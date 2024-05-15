@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Bubbles&family=VT323&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/04d45aa51d.js" crossorigin="anonymous"></script>
+
+    <script src="firebase.js"  defer type="module"></script>
+</head>
+<body>
+    <div class="container">
+
+        <div class = "heading">
+            <h1 class="text-border" id="category-title">Coding Projects</h2>
+        </div>
+
+        <div class="task-div">
+            <div class="add-task">
+                <div>
+                    <input id="added-task" type="textarea" placeholder="enter your task...">
+                </div>
+        
+
+                <div class="icon-container" id="add-icon-pos">
+                    <i class="fa-solid fa-plus"></i>
+
+                </div>
+               
+
+            </div>
+            <div class="task-container" id="task-container">
+                
+            </div>
+
+           
+
+           
+    </div>
+
+
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            const category = urlParams.get('category');
+            const categoryTitleElement = document.getElementById('category-title');
+            if (category) {
+                categoryTitleElement.textContent = decodeURIComponent(category);
+            }
+        });
+    </script>
+
+<script src="app.js"></script>
+    
+</body>
+</html>

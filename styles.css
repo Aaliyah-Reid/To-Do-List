@@ -1,3 +1,4 @@
+/* for all pages */
 body{
     background-image: url(pixel-sky-art.png);
     background-size: cover;
@@ -12,16 +13,23 @@ body{
 
 
 .container{
+    /* display: flex; */
     text-align: center;
+    align-items: center;
+    justify-content: center;
+
 }
 
+
+
+
+/* index.html */
 .heading{
     margin-bottom: 50px;
 }
 
 .heading h1{   
     font-size: 60px;
-    /* font: VT323; */
     font-family: VT323;
     color: #f0f8ff;
     
@@ -44,21 +52,25 @@ body{
     
 }
 
-#category{
-    display: flex;
-    
-}
 
 #category-div{
     background-color: #f0f8ff;
     border-radius: 25px;
+    border: 3px solid #0f9ad0;
     width: 350px;
     height: 70px;
     margin-bottom: 25px;
+    transition: transform 0.3s ease;
+    transform: scale();
 
 }
 
-#category{
+#category-div:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.category{
     display: flex;
     align-items: center;
     text-align: center;
@@ -77,9 +89,245 @@ body{
 .btn{
     height: 50px;
     width: 120px;
-    background-color: aliceblue;
+    background-color: #f0f8ff;
     border-radius: 25px;
-    border: #f0f8ff;
+    border: 2px solid #0f9ad0;
     font-size: 20px;
     font-family: VT323;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    transform: scale();
 }
+
+.btn:hover{
+    transform: scale(1.03);
+
+}
+
+
+/* login.html */
+
+
+
+.login-div {
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.login-div input{
+    border:1px solid #000;
+    color: #000;
+    height: 50px;
+    width: 250px;
+    border-radius: 25px;
+    margin-bottom: 15px;
+    padding-left: 20px;
+    font-family: VT323;
+    font-size: large;
+    background-color: #f0f8ff;
+
+}
+
+.login-div input::placeholder{
+    font-family: VT323;
+    font-size: large;
+    padding-left: 10px;
+    color: #000;
+}
+
+
+.ls-btn{
+    height: 50px;
+    width: 250px;
+    background-color: aliceblue;
+    border-radius: 25px;
+    border: 1px solid #f0f8ff;
+    font-size: 20px;
+    font-family: VT323;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.ls-btn:hover{
+    background-color: black;
+    border: 1px solid #000000;
+    color: whitesmoke;
+
+}
+
+
+a.link{
+    color: #000;
+}
+
+
+a.link:hover{
+    color: #FE7A35;
+}
+
+/* list.html */
+
+.add-task{
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    gap: 10px;
+
+}
+
+.add-task input{
+    border:2px solid #0f9ad0;
+    color: #000;
+    height: 50px;
+    width: 250px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    padding-left: 20px;
+    font-family: VT323;
+    font-size: large;
+    background-color: #f0f8ff;
+
+
+}
+
+.add-task input::placeholder{
+    font-family: VT323;
+    font-size: large;
+    padding-left: 10px;
+    color: #000;
+}
+
+
+
+.icon-container{
+    border: 2px solid #0f9ad0;
+    border-radius: 15px;
+    background-color: #f0f8ff;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    bottom: 7px;
+    
+}
+
+.icon-container:hover{
+    background-color:#0f9ad0 ;
+    cursor: pointer;
+}
+.icon-container i {
+    color: #0f9ad0; 
+}
+.icon-container:hover i{
+    color: #f0f8ff;
+}
+
+.task-container {
+    display: flex;
+    flex-direction: column; /* Change from row to column */
+    gap: 10px;
+}
+
+
+
+.task {
+    display: flex; /* Make the task a flex container */
+    align-items: center; /* Center items vertically */
+    border: 2px solid #0f9ad0;
+    color: #000;
+    /* height: auto; */
+    max-width: 250px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    padding-left: 20px;
+    /* padding: 10px 20px; */
+    font-family: VT323;
+    font-size: large;
+    background-color: #f0f8ff;
+    text-align: left;
+    cursor: pointer;
+    word-wrap: break-word;
+}
+
+.task p {
+    word-wrap: break-word; /* Allow text to wrap within the max-width */
+  overflow-wrap: break-word; /* For better word-breaking support */
+    flex-grow: 1; /* Allow the paragraph to grow to fill available space */
+    margin: 0; /* Remove default margin */
+}
+
+.icon-container {
+    margin-left: auto;
+     /* Push the trash icon to the right */
+}
+
+.trash-icon-pos {
+    margin-left: 10px; 
+    display: flex; /* Ensure the trash icon container behaves as a flex container */
+    align-items: center; /* Center the icon vertically */
+}
+
+
+
+/* .add-task.add-icon-pos{
+    position: absolute;
+    right: 20px;
+} */
+
+/* .task-container{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+
+
+.task{
+    border: 2px solid #0f9ad0;
+    color: #000;
+    height: 50px;
+    width: 250px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    padding-left: 20px; 
+    font-family: VT323;
+    font-size: large;
+    background-color: #f0f8ff;
+    text-align: left;
+    
+
+
+}
+
+.task-div{
+    max-width: 338.4px;
+    height: fit-content;
+} */
+
+/* .trash-icon-pos{
+    position: absolute;
+    bottom: 7px;
+
+} */
+
+
+
+.strike-through {
+    text-decoration: line-through;
+  }
+
+
+
+
+
+
+
+

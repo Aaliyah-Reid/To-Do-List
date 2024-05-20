@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
       tasksByCategory[currentCategory].push(newTaskText);
       storedStrikethroughState[currentCategory].push(false); // Initialize strike-through state as false
 
-      // Save tasks and strike-through state to local storage
+      // Save tasks and strike-through state to local storage 
       localStorage.setItem('tasksByCategory', JSON.stringify(tasksByCategory));
       localStorage.setItem('strikethroughState', JSON.stringify(storedStrikethroughState));
 
@@ -74,14 +74,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
       trashIconContainer.addEventListener('click', () => deleteTask(newTaskText, currentCategory));
 
       // Add click event listener to strike-through/remove strike-through task text
-      const taskElement = newTaskContainer.querySelector('p');
+      const taskElement = newTaskContainer.querySelector('.container-frame');
       taskElement.addEventListener('click', () => toggleStrikethrough(taskElement, storedStrikethroughState, currentCategory, tasksByCategory[currentCategory].length - 1));
     }
   });
-});
+}); 
 
 function createTaskContainer(taskText) {
+  const container = document.createElement('div');
   const newTaskContainer = document.createElement('div');
+  container.classList.add('container-frame')
   newTaskContainer.classList.add('task');
   const newTaskElement = document.createElement('p');
   newTaskElement.textContent = taskText;
@@ -89,27 +91,28 @@ function createTaskContainer(taskText) {
   trashIconContainer.classList.add('icon-container', 'trash-icon-pos');
   trashIconContainer.innerHTML = '<i class="fa-solid fa-trash"></i>';
   newTaskContainer.appendChild(newTaskElement);
-  newTaskContainer.appendChild(trashIconContainer);
-  return newTaskContainer;
+  container.appendChild(newTaskContainer);
+  container.appendChild(trashIconContainer);
+  return container;
 }
 
 function deleteTask(taskText, category) {
   // Remove the task from the tasks array for the category
   const taskIndex = tasksByCategory[category].indexOf(taskText);
   tasksByCategory[category] = tasksByCategory[category].filter((task, index) => index !== taskIndex);
-  // storedStrikethroughState[category].splice(taskIndex, 1); // Remove strike-through state for the deleted task
 
   // Save tasks and strike-through state to local storage
   localStorage.setItem('tasksByCategory', JSON.stringify(tasksByCategory));
   // localStorage.setItem('strikethroughState', JSON.stringify(storedStrikethroughState));
 
   // Remove the task element from the DOM
-  document.querySelectorAll('.task').forEach(taskElement => {
+  document.querySelectorAll('.container-frame').forEach(taskElement => {
     if (taskElement.firstChild.textContent === taskText) {
       taskElement.remove();
     }
   });
 }
+
 
 function toggleStrikethrough(taskElement, storedStrikethroughState, currentCategory, taskIndex) {
   taskElement.classList.toggle('strike-through');

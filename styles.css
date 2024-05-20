@@ -175,7 +175,7 @@ a.link:hover{
     text-align: center;
     display: flex;
     flex-direction: row;
-    position: relative;
+    /* position: relative; */
     gap: 10px;
 
 }
@@ -186,7 +186,7 @@ a.link:hover{
     height: 50px;
     width: 250px;
     border-radius: 15px;
-    margin-bottom: 15px;
+    /* margin-bottom: 15px; */
     padding-left: 20px;
     font-family: VT323;
     font-size: large;
@@ -234,9 +234,13 @@ a.link:hover{
     display: flex;
     flex-direction: column; /* Change from row to column */
     gap: 10px;
+    margin-top: 15px;
 }
 
-
+.container-frame{
+    display: flex;
+    flex-direction: row;
+}
 
 .task {
     display: flex; /* Make the task a flex container */
@@ -244,11 +248,11 @@ a.link:hover{
     border: 2px solid #0f9ad0;
     color: #000;
     /* height: auto; */
-    max-width: 250px;
+    width: 240px;
     border-radius: 15px;
-    margin-bottom: 15px;
-    padding-left: 20px;
-    /* padding: 10px 20px; */
+    /* margin-bottom: 15px; */
+    /* padding-left: 20px; */
+    padding: 10px 20px;
     font-family: VT323;
     font-size: large;
     background-color: #f0f8ff;
@@ -258,29 +262,26 @@ a.link:hover{
 }
 
 .task p {
-    word-wrap: break-word; /* Allow text to wrap within the max-width */
-  overflow-wrap: break-word; /* For better word-breaking support */
-    flex-grow: 1; /* Allow the paragraph to grow to fill available space */
-    margin: 0; /* Remove default margin */
+    word-wrap: break-word; 
+    overflow-wrap: break-word; 
+    flex-grow: 1;
+    margin: 0; 
 }
 
 .icon-container {
     margin-left: auto;
-     /* Push the trash icon to the right */
+    
 }
 
-.trash-icon-pos {
+.trash-icon-pos  {
     margin-left: 10px; 
-    display: flex; /* Ensure the trash icon container behaves as a flex container */
-    align-items: center; /* Center the icon vertically */
+    display: flex;
+    align-items: center; 
 }
 
 
 
-/* .add-task.add-icon-pos{
-    position: absolute;
-    right: 20px;
-} */
+
 
 /* .task-container{
     display: flex;

@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
   document.querySelectorAll('.category').forEach(categoryElement => {
     categoryElement.addEventListener('click', function() {
       const categoryName = this.getAttribute('data-property');
-      console.log(categoryName);
       window.location.href = `list.html?category=${encodeURIComponent(categoryName)}`;
     });
   });
@@ -73,9 +72,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
       const trashIconContainer = newTaskContainer.querySelector('.trash-icon-pos');
       trashIconContainer.addEventListener('click', () => deleteTask(newTaskText, currentCategory));
 
-      // Add click event listener to strike-through/remove strike-through task text
-      const taskElement = newTaskContainer.querySelector('.container-frame');
-      taskElement.addEventListener('click', () => toggleStrikethrough(taskElement, storedStrikethroughState, currentCategory, tasksByCategory[currentCategory].length - 1));
+      // // Add click event listener to strike-through/remove strike-through task text
+      // const taskElement = newTaskContainer.querySelector('p');
+      // taskElement.addEventListener('click', () => toggleStrikethrough(taskElement, storedStrikethroughState, currentCategory, tasksByCategory[currentCategory].length - 1));
     }
   });
 }); 

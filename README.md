@@ -18,8 +18,8 @@ This project is a to-do list application built using HTML, CSS, and JavaScript. 
 
 ### Categories View
 
-![Categories](categories.png)
+![Categories](app-images/categories.png)
 
 ### Task List View
 
-![Task List](school.png)
+![Task List](app-images/school.png)
